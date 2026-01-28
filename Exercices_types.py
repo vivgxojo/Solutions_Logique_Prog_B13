@@ -127,33 +127,6 @@ print("VLAN", vlan2_int, "valide:", vlan2_valide)
 print("VLAN", vlan3, "valide:", vlan3_valide)
 print("VLAN", vlan4_int, "valide:", vlan4_valide)
 
-# Déterminer le type de VLAN
-print("\n--- Type de VLAN ---")
-
-# VLAN 1
-if vlan1 >= 1 and vlan1 <= 1005:
-    print("VLAN", vlan1, ": Standard")
-else:
-    print("VLAN", vlan1, ": Étendu")
-
-# VLAN 2
-if vlan2_int >= 1 and vlan2_int <= 1005:
-    print("VLAN", vlan2_int, ": Standard")
-else:
-    print("VLAN", vlan2_int, ": Étendu")
-
-# VLAN 3
-if vlan3 >= 1 and vlan3 <= 1005:
-    print("VLAN", vlan3, ": Standard")
-else:
-    print("VLAN", vlan3, ": Étendu")
-
-# VLAN 4
-if vlan4_int >= 1 and vlan4_int <= 1005:
-    print("VLAN", vlan4_int, ": Standard")
-else:
-    print("VLAN", vlan4_int, ": Étendu")
-
 # Vérifier si c'est un VLAN réservé
 print("\n--- VLANs réservés ---")
 vlan1_reserve = vlan1 == 1 or (vlan1 >= 1002 and vlan1 <= 1005)
@@ -168,7 +141,7 @@ print("VLAN", vlan4_int, "réservé:", vlan4_reserve)  # True
 print()
 
 # Résultats:
-# VLAN 1: 10 (int) → valide, standard, non réservé
-# VLAN 2: "20" (str) → 20 (int) → valide, standard, non réservé
-# VLAN 3: 100 (int) → valide, standard, non réservé
-# VLAN 4: "1005" (str) → 1005 (int) → valide, standard, réservé
+# VLAN 1: 10 (int) → valide,  non réservé
+# VLAN 2: "20" (str) → 20 (int) → valide,  non réservé
+# VLAN 3: 100 (int) → valide,  non réservé
+# VLAN 4: "1005" (str) → 1005 (int) → valide,  réservé
