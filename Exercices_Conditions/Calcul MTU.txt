@@ -1,0 +1,19 @@
+MTU effective = MTU de base - Overhead total
+
+MTU de base dépend du type réseau : 
+Ethernet standard (LAN) → MTU = 1500 octets
+Ethernet Jumbo Frames → MTU = 9000 octets
+PPPoE (connexions ADSL/DSL) → MTU = 1492 octets
+Wi-Fi → MTU = 1500 octets
+MPLS → MTU = 1508 octets
+VPN/IPsec sur Internet → MTU = 1400 octets
+
+Overhead total = overhead vpn + overhead tunnel
+
+Si on utilise un vpn
+overhead vpn = 80
+
+Si on utilise un tunnel
+overhead tunnel = 24
+
+Sinon les overhead sont 0
